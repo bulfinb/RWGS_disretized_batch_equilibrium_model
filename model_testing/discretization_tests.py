@@ -10,7 +10,7 @@ project_root = Path(__file__).resolve().parents[1]
 sys.path.append(str(project_root))
 
 from functions.mass_balance import calculate_mass_balance
-from functions.main import cycle_untill_balanced
+from functions.main import cycle_until_balanced
 
 # === CONFIGURATION ===
 material = "CeO2"
