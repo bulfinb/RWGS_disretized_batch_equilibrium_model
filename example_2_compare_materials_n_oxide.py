@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from functions.mass_balance import calculate_mass_balance
-from functions.main import cycle_untill_balanced
+from functions.main import cycle_until_balanced
 from RWGS_thermo.X_CO2_ideal import X_CO2_membrane, X_CO2_catalytic
 
 np.set_printoptions(threshold=10)
