@@ -115,7 +115,7 @@ os.makedirs("plots", exist_ok=True)
 
 # === Plot 1: Delta profiles along the bed for all cycles
 x_space = np.arange(len(delta_t_x_red[-1]))+1
-fig, ax = plt.subplots(figsize=(4.0, 3.7))
+fig, ax = plt.subplots(figsize=(3.4, 3.2))
 ax.set_xlabel('Oxide element # [-]')
 ax.set_ylabel('Non-stoichiometry $\\delta$ [-]')
 
@@ -147,7 +147,7 @@ plt.show()
 
 cycles = np.linspace(1,20,20)
 # === Plot 2: System mass balance
-fig, ax = plt.subplots(figsize=(4.0, 3.7))
+fig, ax = plt.subplots(figsize=(3.4, 3.2))
 ax.set_xlabel('Cycle # [-]')
 ax.set_ylabel('Mass Balance [-]')
 ax.plot(np.linspace(2,20,19), O_bal_oxide_values_red, ls='--', lw=1.3, color='tab:orange', label='Reduction: H$_2$O/$\\Delta \delta$')

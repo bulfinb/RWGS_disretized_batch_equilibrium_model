@@ -1,4 +1,4 @@
-pythonfrom pathlib import Path
+from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
@@ -65,12 +65,15 @@ for mesh in mesh_range:
 # === Plot Results ===
 os.makedirs("plots", exist_ok=True)
 
-plt.figure()
-plt.plot(mesh_range, X_CO2_values, label="$X_{CO2}$")
-plt.plot(mesh_range, X_H2_values, label="$X_{H2}$")
-plt.xlabel("Number of mesh elements [-]")
-plt.ylabel("$X_i$ conversion extent [-]")
+plt.figure(figsize=(3.4, 3.3), facecolor='white')
+plt.plot(mesh_range, X_CO2_values, label="$X_{CO2}$", color = 'black')
+plt.plot(mesh_range, X_H2_values, label="$X_{H2}$", color = 'grey')
+plt.xlabel("$N_\\mathrm{oxide}$, $N_\\mathrm{gas}$  [-]")
+plt.ylabel("Conversion extent $X_i$ [-]")
+plt.axvline(x = 100, color = 'black', ls = '--', label = 'default value')
 plt.legend()
+
+plt.set_xlim(0, 250)
 filename = Path("plots") / "mesh_test_conversion.png"
 plt.savefig(filename, dpi=300, bbox_inches='tight')
 
