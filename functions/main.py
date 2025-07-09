@@ -101,7 +101,7 @@ def simulate_cycle(material="CeO2", first_cycle=True, delta_x_0=np.zeros(100),
     return delta_t_x_red, x_H2O_t_x_red, delta_t_x_ox, x_CO2_t_x_ox
 
 
-def cycle_untill_balanced(max_cycles = 20, O_balance_tolerance = 0.001, material="CeO2",
+def cycle_until_balanced(max_cycles = 20, O_balance_tolerance = 0.001, material="CeO2",
                    T=1073, n_CO2=1.0, n_H2=1.01, n_oxide=20,
                    x_H2O_0=0.005, x_CO2_0=0.998,
                    oxide_mesh=100, gas_mesh=100):
