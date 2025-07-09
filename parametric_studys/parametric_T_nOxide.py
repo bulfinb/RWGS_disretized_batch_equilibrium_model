@@ -13,7 +13,7 @@ parent_dir = Path(__file__).resolve().parent.parent
 sys.path.append(str(parent_dir))
 
 from functions.mass_balance import calculate_mass_balance
-from functions.main import cycle_untill_balanced
+from functions.main import cycle_until_balanced
 
 """
 This script runs a parametric sweep over temperature at fixed H2 feed (n_H2 = 1.5).
