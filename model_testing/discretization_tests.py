@@ -33,7 +33,7 @@ O_bal_oxide_values = []
 # === Mesh Sweep Simulation ===
 for mesh in mesh_range:
     tic = time.perf_counter()
-    delta_t_x_red, x_H2O_t_x_red, delta_t_x_ox, x_CO2_t_x_ox, cycles = cycle_untill_balanced(
+    delta_t_x_red, x_H2O_t_x_red, delta_t_x_ox, x_CO2_t_x_ox, cycles = cycle_until_balanced(
         material=material,
         T=T,
         n_H2=n_H2,
