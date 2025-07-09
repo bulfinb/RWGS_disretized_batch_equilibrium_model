@@ -35,7 +35,7 @@ for material in materials:
     X_CO2 = 0
     for T in T_range:
         if X_CO2 < 0.99:
-            delta_t_x_red, x_H2O_t_x_red, delta_t_x_ox, x_CO2_t_x_ox, cycles = cycle_untill_balanced(
+            delta_t_x_red, x_H2O_t_x_red, delta_t_x_ox, x_CO2_t_x_ox, cycles = cycle_until_balanced(
                 material=material,
                 T=T,
                 n_CO2=n_CO2,
