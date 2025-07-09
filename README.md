@@ -1,3 +1,9 @@
+## 📄 License and Attribution
+
+If you make use of this model please cite the published paper describing it [Add citation], and both the materials source data and model (e.g., Bulfin 2016 model, Kuhn 2011 data).
+
+---
+
 # 🔥 Discretized Redox Reactor Simulation
 
 This code simulates chemical-looping RWGS in a 1D plug-flow-like reactor with oxides including LSF and CeO2 based oxides.
@@ -22,17 +28,18 @@ It tracks:
 
 ## 🗂 File Overview
 
-| File | Purpose                                                                              |
-|------|--------------------------------------------------------------------------------------|
-| `main.py` | Orchestrates one full chemical-looping cycle over the discretized oxide and gas grid |
-| `discretized_reduction.py` | Models reduction phase across time and space                                         |
-| `discretized_oxidation.py` | Models oxidation phase across time and space                                         |
-| `batch_equilibrium_solver.py` | Solves for chemical equilibrium between solid and gas via μ_O matching               |
-| `mass_balance.py` | Computes conversion and oxygen mass balance metrics                                  |
-| `build_arrays.py` | Generates discretized δ and gas composition arrays                                   |
-| `build_mu_O_functions.py` | Builds interpolation functions for μ_O (solid & gas)                                 |
-| `gas_thermodynamics.py` | Provides μ_O and pO₂ equilibrium functions for H₂/H₂O and CO/CO₂                     |
-| `oxide_thermodynamics.py` | μ_O equilibrium models for multiple oxide materials (CeO₂, CeZr, LSF, etc.)          |
+| File                            | Purpose                                                                 |
+|---------------------------------|-------------------------------------------------------------------------|
+| `main.py`                       | Orchestrates redox cycle using the `cycle_until_balanced` function     |
+| `discretized_reduction.py`     | Models reduction phase across discretized gas and oxide elements       |
+| `discretized_oxidation.py`     | Models oxidation phase across discretized gas and oxide elements       |
+| `batch_equilibrium_solver.py`  | Solves gas–solid equilibrium by matching μ_O                           |
+| `mass_balance.py`              | Computes mass balance metrics and oxygen transfer                      |
+| `energy_balance.py`            | Estimates enthalpy and energy exchange across reactor phases           |
+| `build_arrays.py`              | Generates discretized mesh grids for oxide and gas                     |
+| `build_mu_O_functions.py`      | Builds interpolating functions for μ_O (solid and gas)                 |
+| `gas_thermodynamics.py`        | Gas phase equilibrium properties (μ_O, pO₂) for H₂/H₂O and CO/CO₂      |
+| `oxide_thermodynamics.py`      | μ_O equilibrium functions for solid oxides (CeO₂, CeZr, LSF, etc.)     |
 
 ---
 
@@ -49,13 +56,14 @@ It tracks:
 ## 🚀 Quick Example
 
 ```python
-from main import simulate_cycle
+from main import cycle_until_balanced
 
-delta_red, x_H2O_red, delta_ox, x_CO2_ox = simulate_cycle(
+results = cycle_until_balanced(
     material="CeO2",
     T=1073,
     x_H2O_0=0.005,
-    x_CO2_0=0.995
+    x_CO2_0=0.995,
+    tol=1e-4
 )
 ```
 
@@ -63,7 +71,7 @@ delta_red, x_H2O_red, delta_ox, x_CO2_ox = simulate_cycle(
 
 ## 📊 Output Format
 
-- `delta_red`, `delta_ox`: shape = (gas_mesh, oxide_mesh)
+- `delta_red`, `delta_ox`: non-stoichiometry evolution, shape = (gas_mesh, oxide_mesh)
 - `x_H2O_red`, `x_CO2_ox`: gas mole fractions across reactor grid
 - Use `.T[0]` and `.T[-1]` slices to inspect outlet behavior
 
@@ -83,9 +91,3 @@ delta_red, x_H2O_red, delta_ox, x_CO2_ox = simulate_cycle(
 - All μ_O values returned in **kJ/mol**
 - μ_O(gas) from polynomial fits of cantera data and equilibrium expressions
 - μ_O(solid) from literature-derived enthalpy and entropy models
-
----
-
-## 📄 License and Attribution
-
-If using this framework in publications or reports, please cite the source model/data (e.g., Bulfin 2016, Kuhn 2011) and acknowledge the simulation code if applicable.
