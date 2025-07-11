@@ -20,10 +20,11 @@ The simulation computes:
 - **Oxidation phase**: CO₂ + reduced oxide → CO + oxide with countercurrent
 
 It tracks:
-- Oxygen stoichiometry (`δ`)
+- Oxygen non-stoichiometry (`δ`)
 - Gas compositions (`x_H2O`, `x_CO2`)
-- Mass balances
-- Oxygen chemical potentials in both solid and gas phases
+- Mass balances over the whole cycle
+- Energy balance over the whole cycle
+
 
 ---
 
