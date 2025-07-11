@@ -73,9 +73,9 @@ results = cycle_until_balanced(
 
 ## 📊 Output Format
 
-- `delta_red`, `delta_ox`: non-stoichiometry evolution, shape = (gas_mesh, oxide_mesh)
-- `x_H2O_red`, `x_CO2_ox`: gas mole fractions across reactor grid
-- Use `.T[0]` and `.T[-1]` slices to inspect outlet behavior
+- `delta_red`, `delta_ox`: non-stoichiometry evolution during reduction and oxidation, arrray with shape = (gas_mesh, oxide_mesh)
+- `x_H2O_red`, `x_CO2_ox`: gas mole fractions across reactor grid during reduction and oxidation,  arrray with shape = (gas_mesh, oxide_mesh)
+- Use `.T[0]` and `.T[-1]` use slices of the mole fraction arrays to inspect outlet behavior for oxidation [0] and reduction [-1]
 
 ---
 
