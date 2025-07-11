@@ -81,9 +81,8 @@ results = cycle_until_balanced(
 ## 🧪 Materials Supported
 
 - `CeO2`, `CeO2_simple`
-- `CeZr05`, `CeZr15`
+- `CeZr05`, `CeZr15`, `CeZr20`
 - `LSF`
-- `CeZr_lowH` (hypothetical low-enthalpy ceria based oxide)
 
 ---
 
