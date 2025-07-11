@@ -1,14 +1,15 @@
-## 📄 License and Attribution
-
-If you make use of this model please cite the published paper describing it [Add citation], and both the materials source data and model (e.g., Bulfin 2016 model, Kuhn 2011 data).
-
 ---
 
-# 🔥 Discretized Redox Reactor Simulation
+# 🔥 Countercurrent Chemical Looping RWGS - Discretized Batch Reactors Simulation
 
 This code simulates chemical-looping RWGS in a 1D plug-flow-like reactor with oxides including LSF and CeO2 based oxides.
 It uses a discretizion of the oxide (space) and the gas phase (like time discritization) and then solves a sequential series 
 of batch equilibriums over the discritised elements. It is useful for quickly simulating thermodynamic limits. 
+
+
+## 📄 Please Ackowledge
+
+If you make use of this model please cite the published paper describing it [Add citation], and both the materials source data and model (e.g., Bulfin 2016 model, Kuhn 2011 data).
 
 ---
 
