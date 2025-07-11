@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import os
 
 from functions.main import simulate_cycle
 from functions.mass_balance import calculate_mass_balance
