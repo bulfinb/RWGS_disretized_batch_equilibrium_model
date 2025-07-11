@@ -6,26 +6,6 @@ This code simulates chemical-looping RWGS in a 1D plug-flow-like reactor with ox
 It uses a discretizion of the oxide (space) and the gas phase (like time discritization) and then solves a sequential series 
 of batch equilibriums over the discritised elements. It is useful for quickly simulating thermodynamic limits. 
 
-## 📄 LICENSE
-Copyright (c) 2025 Brendan Bulfin
-
-This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
-
-You are free to:
-- Use, modify, and distribute this code for any purpose, including commercial applications,
-- Incorporate it into larger works, and
-- Share it with or without changes,
-
-under the condition that you provide appropriate credit by citing the associated publication:
-
-B. Bulfin et al., "Thermodynamic Modeling of the Countercurrent Chemical Looping Reverse Water Gas Shift Process for Redox Material Screening", Chemical Engineering Journal, 2025. https://doi.org/XXXXXXX
-
-Full license text: https://creativecommons.org/licenses/by/4.0/
-
-## 📄 Please Ackowledge
-
-If you make use of this model please cite the published paper describing it [Add citation], and both the materials source data and model (e.g., Bulfin 2016 model, Kuhn 2011 data).
-
 ---
 
 ## 📘 Project Summary
@@ -107,3 +87,21 @@ results = cycle_until_balanced(
 - All μ_O values returned in **kJ/mol**
 - μ_O(gas) from polynomial fits of cantera data and equilibrium expressions
 - μ_O(solid) from literature-derived enthalpy and entropy models
+
+
+## 📄 License
+
+This model is released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+You are free to use, modify, and distribute the code, including for commercial purposes, provided that you cite the associated publication:
+
+> B. Bulfin et al., "Thermodynamic Modeling of the Countercurrent Chemical Looping Reverse Water Gas Shift Process for Redox Material Screening", *Chemical Engineering Journal*, 2025. [DOI: 10.xxxx/zenodo.xxxxx](https://doi.org/10.xxxx/zenodo.xxxxx)
+
+Please also cite the Zenodo DOI when referencing or redistributing the code.
+
+---
+
+## 📄 Please Ackowledge Materials Data
+
+If you make use of this model please also cite the sources of the materials data and models (e.g. CeZr15 - Hao et al. 2014 data, Bulfin et al. 2016 model).
+
