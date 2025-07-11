@@ -101,7 +101,7 @@ Please also cite the Zenodo DOI when referencing or redistributing the code.
 
 ---
 
-## 📄 Please Ackowledge Materials Data
+## 📄 Materials Data
 
 If you make use of this model please also cite the sources of the materials data and models (e.g. CeZr15 - Hao et al. 2014 data, Bulfin et al. 2016 model).
 
