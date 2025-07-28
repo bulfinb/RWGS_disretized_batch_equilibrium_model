@@ -12,14 +12,14 @@ from functions import build_arrays
 from functions import build_mu_O_functions
 from functions import batch_equilibrium_solver
 
-material = "CeO2"
+material = "CeZr15"
 T= 1073
 gas_mesh = 100
 oxide_mesh = 100
-n_oxide = 10
+n_oxide = 20
 n_CO2 = 1.0
-n_H2 = 1.0
-x_H2O_0 = 0.002
+n_H2 = 1.5
+x_H2O_0 = 0.005
 x_CO2_0 = 0.998
 delta_i_red = 0.001
 delta_i_ox = 0.1
@@ -57,8 +57,8 @@ ax.plot(d_delta, mu_O_H2O_func(x_H2O_0 + d_X), label = "$\\mu_O(x_\\mathrm{H2O})
 ax.plot(d_delta, mu_O_delta_func(delta_i_red + d_delta), label="$\\mu_O(\\delta)$ oxide")
 ax.plot(Delta_delta[0], mu_O_delta_func(delta_i_red + Delta_delta[0]), lw= 0.0,
         color = 'black', ms = 9, marker ='x', label = '$\\Delta \\delta $ equilibrium')
-ax.set_ylim((-350,-260))
-ax.set_xlim(0, 0.105)
+ax.set_ylim((-350,-220))
+ax.set_xlim(0, 0.075)
 plt.legend()
 filename =  Path("plots") / "mu_O_equilibrium_red.png"
 plt.savefig(filename, dpi=300, bbox_inches='tight')
@@ -74,8 +74,8 @@ ax.plot(d_delta, mu_O_CO2_func(x_CO2_0 -  d_X), label = "$\\mu_O(x_\\mathrm{CO2}
 ax.plot(d_delta, mu_O_delta_func( delta_i_ox- d_delta), label="$\\mu_O(\\delta)$ oxide")
 ax.plot(Delta_delta_2[0], mu_O_delta_func(delta_i_ox -  Delta_delta_2[0]), lw= 0.0,
         color = 'black', ms = 9, marker ='x', label = '$\\Delta \\delta $ equilibrium')
-ax.set_ylim((-350,-260))
-ax.set_xlim(0, 0.105)
+ax.set_ylim((-350,-250))
+ax.set_xlim(0, 0.075)
 plt.legend()
 filename =  Path("plots") / "mu_O_equilibrium_ox.png"
 plt.savefig(filename, dpi=300, bbox_inches='tight')
