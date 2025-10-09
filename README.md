@@ -1,10 +1,11 @@
 ---
 
-# 🔥 Countercurrent Chemical Looping RWGS - Discretized Batch Reactors Simulation
+# 🔥 Countercurrent Chemical Looping RWGS - Discretized Batch Reactors in Series Model
 
 This code simulates chemical-looping RWGS in a 1D plug-flow-like reactor with oxides including LSF and CeO2 based oxides.
 It uses a discretizion of the oxide (space) and the gas phase (like time discritization) and then solves a sequential series 
-of batch equilibriums over the discritised elements. It is useful for quickly simulating thermodynamic limits. 
+of batch equilibriums over the discritised elements. It is useful for quickly simulating the thermodynamic limits of countercurrent 
+chemical-looping reactors using non-stoichiometric oxides as the oxygen storage material. 
 
 ---
 
@@ -15,7 +16,7 @@ The simulation computes:
 - **Oxidation phase**: CO₂ + reduced oxide → CO + oxide with countercurrent
 
 It tracks:
-- Oxygen non-stoichiometry (`δ`)
+- Oxygen non-stoichiometry (`δ` e.g. CeO_2-δ
 - Gas compositions (`x_H2O`, `x_CO2`)
 - Mass balances over the whole cycle
 - Energy balance over the whole cycle
@@ -28,12 +29,12 @@ It tracks:
 | File                            | Purpose                                                                 |
 |---------------------------------|-------------------------------------------------------------------------|
 | `main.py`                       | Orchestrates redox cycle using the `cycle_until_balanced` function     |
-| `discretized_reduction.py`     | Models reduction phase across discretized gas and oxide elements       |
-| `discretized_oxidation.py`     | Models oxidation phase across discretized gas and oxide elements       |
-| `batch_equilibrium_solver.py`  | Solves gas–solid equilibrium by matching μ_O                           |
-| `mass_balance.py`              | Computes mass balance metrics and oxygen transfer                      |
-| `energy_balance.py`            | Estimates enthalpy and energy exchange across reactor phases           |
-| `build_arrays.py`              | Generates discretized mesh grids for oxide and gas                     |
+| `discretized_reduction.py`     | Models reduction step across discretized gas and oxide elements       |
+| `discretized_oxidation.py`     | Models oxidation step across discretized gas and oxide elements       |
+| `batch_equilibrium_solver.py`  | Solves the batch gas–solid equilibrium by matching μ_O                           |
+| `mass_balance.py`              | Computes mass balance metrics                       |
+| `energy_balance.py`            | Estimates enthalpy and heat flow during the two steps of the process    |
+| `build_arrays.py`              | Generates discretized mesh grids for oxide and gases                    |
 | `build_mu_O_functions.py`      | Builds interpolating functions for μ_O (solid and gas)                 |
 | `gas_thermodynamics.py`        | Gas phase equilibrium properties (μ_O, pO₂) for H₂/H₂O and CO/CO₂      |
 | `oxide_thermodynamics.py`      | μ_O equilibrium functions for solid oxides (CeO₂, CeZr, LSF, etc.)     |
