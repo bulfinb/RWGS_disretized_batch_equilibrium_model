@@ -9,7 +9,7 @@ chemical-looping reactors using non-stoichiometric oxides as the oxygen storage 
 
 ---
 
-## 📄 License
+## 📄 License & Citation
 
 This model is released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
