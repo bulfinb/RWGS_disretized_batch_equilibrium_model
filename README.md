@@ -15,7 +15,7 @@ This model is released under the [Creative Commons Attribution 4.0 International
 
 You are free to use, modify, and distribute the code, including for commercial purposes, provided that you cite the associated publication:
 
-> B. Bulfin et al., "Thermodynamic Modeling of the Countercurrent Chemical Looping Reverse Water Gas Shift Process for Redox Material Screening", *Chemical Engineering Journal*, 2025. [DOI: 10.1016/j.cej.2025.170505]([https://doi.org/10.1016/j.cej.2025.170505])
+B. Bulfin et al., "Thermodynamic Modeling of the Countercurrent Chemical Looping Reverse Water Gas Shift Process for Redox Material Screening", *Chemical Engineering Journal*, 2025. [DOI: 10.1016/j.cej.2025.170505]([https://doi.org/10.1016/j.cej.2025.170505])
 
 ---
 
