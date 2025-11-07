@@ -9,6 +9,16 @@ chemical-looping reactors using non-stoichiometric oxides as the oxygen storage 
 
 ---
 
+## 📄 License
+
+This model is released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+You are free to use, modify, and distribute the code, including for commercial purposes, provided that you cite the associated publication:
+
+> B. Bulfin et al., "Thermodynamic Modeling of the Countercurrent Chemical Looping Reverse Water Gas Shift Process for Redox Material Screening", *Chemical Engineering Journal*, 2025. [DOI: 10.1016/j.cej.2025.170505]([https://doi.org/10.1016/j.cej.2025.170505])
+
+---
+
 ## 📘 Project Summary
 
 The simulation computes:
@@ -65,8 +75,6 @@ results = cycle_until_balanced(
 )
 ```
 
----
-
 ## 📊 Output Format
 
 - `delta_red`, `delta_ox`: non-stoichiometry evolution during reduction and oxidation, arrray with shape = (gas_mesh, oxide_mesh)
@@ -89,16 +97,6 @@ results = cycle_until_balanced(
 - μ_O(gas) from polynomial fits of cantera data and equilibrium expressions
 - μ_O(solid) from literature-derived enthalpy and entropy models
 
-
-## 📄 License
-
-This model is released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
-
-You are free to use, modify, and distribute the code, including for commercial purposes, provided that you cite the associated publication:
-
-> B. Bulfin et al., "Thermodynamic Modeling of the Countercurrent Chemical Looping Reverse Water Gas Shift Process for Redox Material Screening", *Chemical Engineering Journal*, 2025. [DOI: 10.xxxx/zenodo.xxxxx](https://doi.org/10.xxxx/zenodo.xxxxx)
-
-Please also cite the Zenodo DOI when referencing or redistributing the code.
 
 ---
 
