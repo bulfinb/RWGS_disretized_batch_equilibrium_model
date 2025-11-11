@@ -104,3 +104,9 @@ results = cycle_until_balanced(
 
 If you make use of this model please also cite the sources of the materials data and models (e.g. CeZr15 - Hao et al. 2014 data, Bulfin et al. 2016 model).
 
+---
+
+## 📄 AI Usage Statement
+
+ChatGPT was used as a coding assistant in this project. It assisted with applying PEP 8 conventions, drafting docstrings, and debugging. After review of my publication, it was also used to help draft this README. All code and text were reviewed, edited, and approved by the author.
+
